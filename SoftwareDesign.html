@@ -1,0 +1,74 @@
+<html> 
+<head>
+<style>
+
+.num {
+	text-align: right;
+}
+
+
+</style>
+</head>
+
+<body>
+<h2>Software Design</h2>
+<h3>Model</h3>
+
+<table>
+<tr><td style="border-bottom: thin solid gray"><b>Ships</b></td><td><b>size</b></td><td><b>marker</b></td><br>
+<tr><td>Destroyer</td><td class="num">2</td><td class="num"> 1</td></tr>
+<tr><td>Submarine</td><td class="num">3</td><td class="num"> 2</td></tr>
+<tr><td>Cruiser</td><td class="num">3</td><td class="num"> 3</td></tr>
+<tr><td>Battleship</td><td class="num">4</td><td class="num"> 4</td></tr>
+<tr><td>Carrier</td><td class="num">5</td><td class="num"> 5</td></tr>
+</table>
+<br>
+
+<p>
+The size of the ship is how many cells it takes up aswell as how many hits it can take. <br>
+Each Ship object will also have a <b>hit</b> and a <b> location </b> property.
+<br>
+<ul><li>
+<b>hit</b> a counter for how many hits the ship has taken
+</li><li>
+<b>location</b> a 2D array which has the location for the ship. 
+</li></ul>
+</p>
+
+<h4>Grids</h3>
+
+<p>
+The computer and the player each have a grid which will have the location of their ships.<br>
+Here is an example: <br>
+<tt>PlayerGrid: {{0,0,0,0,0,1,1,0,0,0}, {0,5,0,0,0,0,0,0,0,0}, {0,5,0,0,0,0,0,0,0,0}, {0,5,0,0,0,0,0,0,0,0,}, {0,5,0,0,0,0,0,0,0,0}, {0,0,5,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}};</tt>
+<br> 
+<br>
+Each player also has a grid which will show if a cell has been hit by the other player, and if that hit was successful or not. <br>
+Here is an example:<br>
+<tt>PlayerCompGrid : {{1,0,0,0,0,0,0,1,0,0}, {0,0,0,0,0,1,0,0,1,0}, {0,0,2,1,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0,}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}};</tt>
+</p>
+
+<p>
+<b>Game</b><br>
+<ul><li>
+<b>turn</b> a var to keep track who's turn it currently is.
+</li><li>
+<b>gameOver</b> to keep track if the game is over or not.
+</li></ul>
+</p>
+<br>
+
+
+<h4>Functions/Methods</h4>
+
+<p>
+<b>addShip(ship, grid)</b><br>
+Marks on the passed in grid where the passed in ship is. 
+</p>
+
+
+
+
+</body>
+
+</html>

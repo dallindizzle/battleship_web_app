@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="js/ajax.js"></script>
+<link rel="cs/stylesheet" type="text/css" href="stylesheet.css">
+<title>Battleship</title>
+</head>
+
+<body>
+<center><h1>Battleship</h1></center>
+<img class="imagec" src="img/battleship-27642_1280.png" alt="Battleship" height="360" width="480">
+
+<h2>About</h2>
+<p> Battleship is a guessing game for one player vs a player It's played on ruled grids on which the players' fleets of ships (including battleships) are marked. The locations of the fleet are concealed from the other player. Players alternate turns taking 'shots' at the other player's fleet. The objective of the game is to destroy the opposing player's fleet.
+
+<h2>Rules</h2>
+<p>Each player has five ships which will be placed onto their grid. 
+Each player's fleet conists of a 
+<ul>
+	<li>Destroyer &nbsp= two cell
+	<li>Submarine &nbsp= three cells
+	<li>Cruiser &nbsp&nbsp&nbsp= three cells
+	<li>Battleship = four cells
+	<li>Carrier &nbsp&nbsp&nbsp= five cells
+</ul>
+<p>Each player also has another grid which they will use to fire shots in order to sink the opposing players ships. The human player will go first and will click on a cell on the grid to fire a shot. If the shot hits an H will mark that spot. If the shot missed then a M will mark that spot. After the player has made its shot the Computer turn will start and will attempt the same. When a ship has been sunk the H which marked hits on the ship will turn into D for dead. The game ends once a player has won by sinking all of the opossing player's ships.
+<a href="http://howdoyouplayit.com/battleship-board-game-rules-play" target="_blank">For more info on how to play click here.</a> </p>
+<!--
+<center>Name: <input type="text" id="name2Txt" />
+Password: <input type="password" id="pass2Txt"/><br>
+<button id="loadBtn" onclick="LoadSyncPost()">Log in</button>
+<div id="data4Div">
+Message will show here
+-->
+<center><h2><a href="gamegrid.html" target="_blank">Play</a></h2></center>
+</div></center>
+<h1>JSON</h1>
+<p>gameState: {<br /> "computer" : {<br /> compGrid : {{0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0,}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}};<br /> compPlayerGrid : {{0,0,0,0,0,0,0,0,0,0}, {0,0,1,0,0,0,0,0,0,0}, {0,0,1,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0,}, {0,0,0,0,1,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {1,0,0,1,0,0,0,0,0,0}};<br /> "comp_ships" {<br /> "comp_destroyer" {"name" : 'destroyer', "size" : 2, "marker" : 1, "location" : {{1, 2}, {1, 3}}}<br /> "comp_submarine" {"name" : 'submarine' , "size" : 3, "marker" : 2, "location" : {{ 4,1}, {4,2}, {4,3}}}<br /> "comp_cruiser" { " name" : 'cruiser', "size" : 3, "marker" : 3, "location" : {{10,10},{10,9},{10,8}}}<br /> "comp_battleship" { "name" : 'battleship', "size": 4, "marker" : 4, "location" : {{6,6},{6,7},{6,8}{6,9}}}<br /> "comp_carrier" {"name" : 'carrier', "size" : 5, "marker" : 5, "location" : ({5,10},{6,10},{7,10},{8,10},{9,10}}}<br /> }<br /> }<br /> "player" : {<br /> PlayerGrid : {{0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0,}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}};<br /> PlayerCompGrid : {{1,0,0,0,0,0,0,1,0,0}, {0,0,0,0,0,1,0,0,1,0}, {0,0,2,1,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0,}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0,0}};<br /> "ships" : {<br /> "destroyer" {"name" : 'destroyer', "size" : 2, "marker" : 1, "location" : {{3, 5}, {3, 6}}}<br /> "submarine" {"name" : 'submarine' , "size" : 3, "marker" : 2, "location" : {{ 2,3}, {3,3}, {4,3}}}<br /> "cruiser" { " name" : 'cruiser', "size" : 3, "marker" : 3, "location" : {{7,1},{7,2},{7,3}}}<br /> "battleship" { "name" : 'battleship', "size": 4, "marker" : 4, "location" : {{5, 8},{6, 8},{7, 8}{8, 8}}}<br /> "carrier" {"name" : 'carrier', "size" : 5, "marker" : 5, "location" : ({10,5},{10,6},{10,7},{10,8},{10,9}}}<br /> }<br /> }<br /> <br /> "turn": : 1,<br /> "gameOver": false<br />}</p>
+<p>}</p>
+
+<center><h2><a href="SoftwareDesign.html" target="_blank">Software Design</a></h2></center>
+<center><h2><a href="documentation.html" target="_blank">Documentation</a></h2></center>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+h1, h2
+{
+	font-family: Lucida Console;
+	border-bottom: 1px solid black;
+}
+
+body
+{
+	font-family: Courier New;
+	font-weight: normal;
+	line-height: 1.5em;
+	
+	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+	background-size:110px 200px;
+	background-repeat:repeat-x;
+}
+
+p, h2
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.imagec
+{
+	display: block;
+	margin: 0px auto 0px auto;
+}
+

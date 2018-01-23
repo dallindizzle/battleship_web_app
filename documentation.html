@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+body {
+	
+	font-size: 20px;
+}
+</style>
+<title>Documentation</title>
+</head>
+<body>
+<h1><center>Documentation</center></h1>
+The game that I chose for this project was Battleship. I have implemented battleship through the use of multiple 2d arrays and objects. The 2d arrays
+represent the human player's and the computer player's grid where their ships are, and also their grids of the other players grid showing where they have shot.
+The program randomly places the computer's ships and the player's ships are placed according to a file named "playerdata.json" which the player can alter to change
+the positioning of their ships. <br>
+Once everything has been loaded the player can start by clicking any cell on the left grid to try to hit one of the computer's ships. When the player clicks on a cell 
+the program checks first to see if that spot has been hit before and if it has then it does nothing. If that spot has not been hit before then it checks to see if there is a 
+ship there and if there is then it changes that cell's color to red. If the shot did not hit a ship then it changes the cell's color to white. The program also marks the cell that
+it has been hit. When a ship has been hit, it will add "1" to the ships "hit" counter and then it will check to see if the ships hit counter is equal to the size of the ship. If the 
+hit counter is the size of the ship, a alert will say that the ship has been sunk. <br>
+Once the player has fired, the computer will fire at a random spot on the player's grid until it hits a ship. When the computer hits a player ship it will then start hitting adjacent cells until 
+it hits the ship again and then will start hitting the adjacent cells that are going the same direction. The computer will keep doing this until it has sunk the ship, 
+then it will start hitting random cells again. Once either the human player or the computer has sunk all of the oppsoing player's ships, their will be an alert 
+that says who won and then the game will reset and the computer's ships will be randomly placed again. <br><br>
+There is a song that the player can play clicking the player button at the top right and there is a canvas at the bottom of the page that has the words "Battleship"
+painted on it. The play can also type their name in the box on the top left and select the size of the grid they want, and then click submit which tells the player what they have 
+selected.
+
+</body>
+</html>

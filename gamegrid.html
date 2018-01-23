@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+td
+{
+	width: 30px;
+	height: 30px;
+	background-color: grey;
+	border-style: solid;
+	border-width: 1px;
+
+}
+
+td:hover {
+	background-color: #d3d3d3;
+}
+
+table
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	table-layout: fixed;
+
+}
+
+img
+{
+	display:block; 
+	width:100%; 
+	height:auto;
+}
+
+.hit
+{
+	background-color: red;
+}
+
+.miss
+{
+	background-color: white;
+}
+
+
+#wrap {
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+
+#gameGridDiv2 {
+	float: right;
+
+}
+
+#gameGridDiv {
+	float: left;
+
+}
+
+#missleDiv {
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	height: 65;
+}
+
+
+#missleImg {
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	height: 50px;
+	width: 150px;
+	margin-top: 50px;
+
+}
+
+#Canvas {
+	position:absolute;
+    width:300px;
+    height:300px;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+}
+
+
+</style>
+
+<script src="js/genGrid.js"></script>
+<script src="js/model.js"></script>
+
+</head>
+
+<body onload="showGrid(); showLoginInfo()">
+<!-- <audio controls>
+	<source src ="song.mp3" type="audio/mpeg">
+</audio>
+<div id="missleDiv">
+<button onclick="startMove()" >Submit</button>
+<input id="nameTxt" type="text" value="Type Name"></input>
+<select id="selectDiv">
+	<option value="10x10">10x10</option>
+	<option value="20x20">20x20</option>	
+</select>
+</div> -->
+
+
+
+<div id="wrap">
+	<div id="gameGridDiv">This should be overwritten</div>
+	<div id="gameGridDiv2">This also should not be shown</div>
+</div>
+
+<h2 id="cord"> </h2>
+
+<div id="Canvas">
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> </canvas>
+</div>
+
+</body>
+
+
+</html>
